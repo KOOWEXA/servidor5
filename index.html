@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Suri_Nails - Servicios profesionales de manicura, pedicura, depilación con cera y tinte henna en Managua, Nicaragua">
+    <title>Suri_Nails</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/1995/1995542.png">
+    
+    <style>
+        :root {
+            --primary: #ff85a2;
+            --light: #fff0f5;
+            --dark: #333;
+            --text: #555;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .logo h1 {
+            font-size: 24px;
+        }
+        
+        .logo-icon {
+            font-size: 24px;
+        }
+        
+        .hero {
+            background: var(--light);
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        .pricing {
+            padding: 40px 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .section-title h2 {
+            font-size: 28px;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+        
+        .price-category {
+            margin-bottom: 30px;
+        }
+        
+        .price-category h3 {
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+        
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .price-item:last-child {
+            border-bottom: none;
+        }
+        
+        .service-name {
+            font-weight: 500;
+        }
+        
+        .service-price {
+            color: var(--dark);
+            font-weight: 500;
+        }
+        
+        .contact {
+            padding: 40px 0;
+            background-color: var(--light);
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-icon {
+            background-color: var(--primary);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            color: white;
+            flex-shrink: 0;
+        }
+        
+        .contact-text h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: var(--dark);
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        
+        @media (max-width: 767px) {
+            .price-item {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">💅</span>
+                <h1>Suri_Nails</h1>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Lista de Precios</h2>
+            <p>Servicios profesionales de belleza con precios accesibles</p>
+        </div>
+    </section>
+
+    <section class="pricing">
+        <div class="container">
+            <div class="section-title">
+                <h2>Precios y Servicios</h2>
+            </div>
+            
+            <div class="price-category">
+                <h3>Esmaltado de gel</h3>
+                <div class="price-item">
+                    <span class="service-name">Manos</span>
+                    <span class="service-price">800cup / 2usd</span>
+                </div>
+                <div class="price-item">
+                    <span class="service-name">Pies</span>
+                    <span class="service-price">800cup / 2usd</span>
+                </div>
+            </div>
+            
+            <div class="price-category">
+                <h3>Base rubber</h3>
+                <div class="price-item">
+                    <span class="service-name">Cortas</span>
+                    <span class="service-price">1300cup / 2usd</span>
+                </div>
+                <div class="price-item">
+                    <span class="service-name">Medianas</span>
+                    <span class="service-price">1500cup / 3usd</span>
+                </div>
+                <div class="price-item">
+                    <span class="service-name">Largas</span>
+                    <span class="service-price">1700cup / 4usd</span>
+                </div>
+            </div>
+            
+            <div class="price-category">
+                <h3>Poligel o builder en los pies</h3>
+                <div class="price-item">
+                    <span class="service-name">Dedos gordo</span>
+                    <span class="service-price">1200cup / 2usd</span>
+                </div>
+                <div class="price-item">
+                    <span class="service-name">Relleno dedo gordo</span>
+                    <span class="service-price">1000cup / 2usd</span>
+                </div>
+                <div class="price-item">
+                    <span class="service-name">En todas las uñas</span>
+                    <span class="service-price">1500cup / 3usd</span>
+                </div>
+                <div class="price-item">
+                    <span class="service-name">Relleno todas las uñas</span>
+                    <span class="service-price">1200cup / 2usd</span>
+                </div>
+            </div>
+            
+            <div class="price-category">
+                <h3>Base rubber en los pies</h3>
+                <div class="price-item">
+                    <span class="service-name">Base rubber en los pies</span>
+                    <span class="service-price">1100cup / 2usd</span>
+                </div>
+            </div>
+            
+            <div class="price-category">
+                <h3>Pedicura</h3>
+                <div class="price-item">
+                    <span class="service-name">Pedicura con jelly spa</span>
+                    <span class="service-price">1800cup / 3usd</span>
+                </div>
+            </div>
+            
+            <div class="price-category">
+                <h3>Uñas de poligel</h3>
+                <div class="price-item">
+                    <span class="service-name">Cortas #1-2</span>
+                    <span class="service-price">2100cup / 5usd</span>
+                </div>
+                <div class="price-item">
+                    <span class="service-name">Relleno cortas</span>
+                    <span class="service-price">1500cup / 4usd</span>
+                </div>
+                <div class="price-item">
+                    <span class="service-name">Medianas #3-4</span>
+                    <span class="service-price">2500cup / 6usd</span>
+                </div>
+                <div class="price-item">
+                    <span class="service-name">Relleno medianas</span>
+                    <span class="service-price">1800cup / 5usd</span>
+                </div>
+                <div class="price-item">
+                    <span class="service-name">Largas #5-6</span>
+                    <span class="service-price">3300cup / 7usd</span>
+                </div>
+                <div class="price-item">
+                    <span class="service-name">Relleno largas</span>
+                    <span class="service-price">2600cup / 6usd</span>
+                </div>
+            </div>
+            
+            <div class="price-category">
+                <h3>Relleno de uñas acrílicas</h3>
+                <div class="price-item">
+                    <span class="service-name">Cortas</span>
+                    <span class="service-price">1600cup</span>
+                </div>
+                <div class="price-item">
+                    <span class="service-name">Medianas</span>
+                    <span class="service-price">1800cup</span>
+                </div>
+                <div class="price-item">
+                    <span class="service-name">Largas</span>
+                    <span class="service-price">2000cup</span>
+                </div>
+            </div>
+            
+            <div class="price-category">
+                <h3>Servicios adicionales</h3>
+                <div class="price-item">
+                    <span class="service-name">Cada uña caída</span>
+                    <span class="service-price">100/200cup</span>
+                </div>
+                <div class="price-item">
+                    <span class="service-name">Retiro de uñas</span>
+                    <span class="service-price">500cup</span>
+                </div>
+                <div class="price-item">
+                    <span class="service-name">Decoración</span>
+                    <span class="service-price">100/200cup</span>
+                </div>
+            </div>
+            
+            <div class="price-category">
+                <h3>Depilación con cera</h3>
+                <div class="price-item">
+                    <span class="service-name">Cejas</span>
+                    <span class="service-price">300cup</span>
+                </div>
+                <div class="price-item">
+                    <span class="service-name">Bigote</span>
+                    <span class="service-price">300cup</span>
+                </div>
+                <div class="price-item">
+                    <span class="service-name">Barbilla</span>
+                    <span class="service-price">300cup</span>
+                </div>
+            </div>
+            
+            <div class="price-category">
+                <h3>Tinte henna</h3>
+                <div class="price-item">
+                    <span class="service-name">Tinte henna</span>
+                    <span class="service-price">300cup</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contacto</h2>
+            </div>
+            
+            <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div class="contact-text">
+                    <h3>Dirección</h3>
+                    <p>Calle entrada entre Cowley y Vento Boyero x los 12 planta D Vento</p>
+                </div>
+            </div>
+            
+            <div class="contact-item">
+                <div class="contact-icon">📱</div>
+                <div class="contact-text">
+                    <h3>Teléfono / WhatsApp</h3>
+                    <p>+53 5 5918705</p>
+                    <a href="https://wa.me/5355918705" class="btn" target="_blank">Enviar Mensaje</a>
+                </div>
+            </div>
+            
+            <div class="contact-item">
+                <div class="contact-icon">👥</div>
+                <div class="contact-text">
+                    <h3>Grupo de WhatsApp</h3>
+                    <p>Únete a mi grupo para conocer los turnos semanales</p>
+                    <a href="https://chat.whatsapp.com/B51iu3M4goNHW4wpHzhtVW" class="btn" target="_blank">Unirse al Grupo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
