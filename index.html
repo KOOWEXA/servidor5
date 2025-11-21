@@ -160,15 +160,108 @@
             margin-top: 10px;
         }
         
+        /* Estilos del modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--text);
+        }
+        
+        .modal-logo {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+        
+        .modal-title {
+            font-size: 24px;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+        
+        .modal-text {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .modal-btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        
+        .modal-btn:hover {
+            background-color: #ff6b95;
+        }
+        
+        .sponsor-text {
+            margin-top: 15px;
+            font-size: 14px;
+            color: var(--text);
+        }
+        
+        .sponsor-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
         @media (max-width: 767px) {
             .price-item {
                 flex-direction: column;
                 gap: 5px;
             }
+            
+            .modal-content {
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Modal promocional -->
+    <div id="promoModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-logo">💅</div>
+            <h2 class="modal-title">¡Bienvenida a Suri_Nails!</h2>
+            <p class="modal-text">Disfruta de nuestros servicios profesionales de manicura, pedicura y más a precios accesibles.</p>
+            <p class="sponsor-text">Esta plataforma está patrocinada por <a href="https://koowexa.github.io/oficial/" class="sponsor-link" target="_blank">KOOWEXA</a></p>
+            <a href="#" class="modal-btn" id="closeModalBtn">Ver servicios</a>
+        </div>
+    </div>
+
     <header>
         <div class="container">
             <div class="logo">
@@ -360,7 +453,7 @@
                 <div class="contact-text">
                     <h3>Teléfono / WhatsApp</h3>
                     <p>+53 5 5918705</p>
-                    <a href="https://wa.me/5355918705" class="btn" target="_blank">Enviar Mensaje</a>
+                    <a href="https://wa.me/5355918705?text=Hola,%20te%20contacto%20desde%20la%20página%20web%20Suri%20Nails.%20Quiero%20solicitar%20tus%20servicios%20de%20manicura." class="btn" target="_blank">Enviar Mensaje</a>
                 </div>
             </div>
             
@@ -374,5 +467,36 @@
             </div>
         </div>
     </section>
+
+    <script>
+        // Mostrar modal al cargar la página
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('promoModal');
+            const closeBtn = document.querySelector('.modal-close');
+            const closeModalBtn = document.getElementById('closeModalBtn');
+            
+            // Mostrar modal después de un pequeño retraso
+            setTimeout(function() {
+                modal.style.display = 'flex';
+            }, 1000);
+            
+            // Cerrar modal al hacer clic en la X
+            closeBtn.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+            
+            // Cerrar modal al hacer clic en el botón
+            closeModalBtn.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+            
+            // Cerrar modal al hacer clic fuera del contenido
+            window.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
